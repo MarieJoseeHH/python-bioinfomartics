@@ -14,7 +14,7 @@ Aliivibrio_R8-70_concat
 104058;105062;Ornithine carbamoyltransferase chain I
 
 """
-
+import sys
 
 def set_width(cds_table):
     """Extracts start and stop bases from input file.
