@@ -3,27 +3,27 @@
     "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="2290" height="400"
     xmlns="http://www.w3.org/2000/svg" version="1.1">
-<title>CDS organisation-Aliivibrio salmonicida LFI1238(257294..266456)</title>
+<title>CDS organisation-A. salmonicida LFI1238(257294..266456)</title>
 
-<text x="10" y="210" font-size="40" font-style="italic">Aliivibrio salmonicida LFI1238</text>
+<text x="10" y="210" font-size="40" font-style="italic">A. salmonicida LFI1238</text>
 
-<path d="M600,200 l25,-50 l171,0 l0,100 l-171,0z"    fill="none" stroke="black" stroke-width="3"/>
-<text x="625 " y="140" transform="rotate(-45 625 140)" font-size="40"> hemY</text>
+<path d="M550,200 l25,-50 l171,0 l0,100 l-171,0z"    fill="none" stroke="black" stroke-width="3"/>
+<text x="575 " y="140" transform="rotate(-45 575 140)" font-size="40"> hemY</text>
 
-<path d="M796,200 l25,-50 l177,0 l0,100 l-177,0z"    fill="none" stroke="black" stroke-width="3"/>
-<text x="821 " y="140" transform="rotate(-45 821 140)" font-size="40"> hemX</text>
+<path d="M746,200 l25,-50 l177,0 l0,100 l-177,0z"    fill="none" stroke="black" stroke-width="3"/>
+<text x="771 " y="140" transform="rotate(-45 771 140)" font-size="40"> hemX</text>
 
-<path d="M1001,200 l25,-50 l99,0 l0,100 l-99,0z"    fill="none" stroke="black" stroke-width="3"/>
-<text x="1026 " y="140" transform="rotate(-45 1026 140)" font-size="40"> hemD</text>
+<path d="M951,200 l25,-50 l99,0 l0,100 l-99,0z"    fill="none" stroke="black" stroke-width="3"/>
+<text x="976 " y="140" transform="rotate(-45 976 140)" font-size="40"> hemD</text>
 
-<path d="M1125,200 l25,-50 l130,0 l0,100 l-130,0z"    fill="none" stroke="black" stroke-width="3"/>
-<text x="1150 " y="140" transform="rotate(-45 1150 140)" font-size="40"> hemC</text>
+<path d="M1075,200 l25,-50 l130,0 l0,100 l-130,0z"    fill="none" stroke="black" stroke-width="3"/>
+<text x="1100 " y="140" transform="rotate(-45 1100 140)" font-size="40"> hemC</text>
 
-<path d="M1324,150 l393,0 l25,50 l-25,50 l-393,0z"    fill="none" stroke="black" stroke-width="3"/>
-<text x="1349 " y="140" transform="rotate(-45 1349 140)" font-size="40"> cya
+<path d="M1274,150 l393,0 l25,50 l-25,50 l-393,0z"    fill="none" stroke="black" stroke-width="3"/>
+<text x="1299 " y="140" transform="rotate(-45 1299 140)" font-size="40"> cya
 </text>
 
-<path d="M1760,150 l342,0 l25,50 l-25,50 l-342,0z"    fill="none" stroke="black" stroke-width="3"/>
-<text x="1785 " y="140" transform="rotate(-45 1785 140)" font-size="40"> uvrD
+<path d="M1710,150 l342,0 l25,50 l-25,50 l-342,0z"    fill="none" stroke="black" stroke-width="3"/>
+<text x="1735 " y="140" transform="rotate(-45 1735 140)" font-size="40"> uvrD
 </text>
 </svg>

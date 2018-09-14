@@ -1,4 +1,4 @@
-Aliivibrio salmonicida LFI1238
+A. salmonicida LFI1238
 257294;258475;hemY;reverse
 258472;259686;hemX;reverse
 259699;260445;hemD;reverse

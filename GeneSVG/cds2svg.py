@@ -30,7 +30,7 @@ def set_coordinates(cds_table,organism,start):
     """Extracts required coordinates for svg paths"""
 
     arrow_data=[]
-    x0=len(organism)*20
+    x0=len(organism)*25
     xshift=int(start)//6-x0
     for i,p in enumerate(cds_table):
         cds_start=p.split(';')[0]
