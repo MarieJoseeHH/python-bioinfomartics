@@ -23,7 +23,7 @@ def set_width(cds_table):
 
     start=cds_table[1].split(';')[0]
     stop=cds_table[-1].split(';')[1]
-    svg_width=(int(stop)-int(start))//5
+    svg_width=abs(int(stop)-int(start))//15
     return(start,stop,svg_width)
 
 def set_coordinates(cds_table,organism,start):
@@ -40,13 +40,13 @@ def set_coordinates(cds_table,organism,start):
         x1=int(cds_start)//6-xshift
         #check for strand oritentation
         if len(p.split(';'))==4:#reverse
-            y1=900
+            y1=100
             x2,y2=25,-50
             x3,y3=path_length-25,0
             x4,y4=0,100
             x5,y5=-(path_length-25),0
         else:
-            y1=850
+            y1=50
             x2,y2=path_length-25,0
             x3,y3=25,50
             x4,y4=-25,50
@@ -64,7 +64,7 @@ def draw_arrow (arrow_data):
     path_style='   fill="none" stroke="black" stroke-width="3"/>\n'
     for i,p in enumerate(arrow_data):
         arrow_path='\n<path d="M'+str(p[1])+','+str(p[2])+' l'+str(p[3])+','+str(p[4])+' l'+str(p[5])+','+str(p[6])+' l'+str(p[7])+','+str(p[8])+' l'+str(p[9])+','+str(p[10])+'z" '
-        arrow_text='<text x="'+str(p[1]+25)+' " y="840" transform="rotate(-45 '+str(p[1]+25)+' 840)" font-size="40"> '+p[0]+'</text>\n'
+        arrow_text='<text x="'+str(p[1]+25)+' " y="40" transform="rotate(-45 '+str(p[1]+25)+' 840)" font-size="40"> '+p[0]+'</text>\n'
         svg_arrow=svg_arrow+arrow_path+path_style+arrow_text
     return(svg_arrow)
 
@@ -74,10 +74,10 @@ def code_svg (svg_width,organism,svg_arrow):
 
     svg_code="""<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
-    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n"""+'<svg width="'+str(svg_width)+'" height="1000"\n'+'    xmlns="http://www.w3.org/2000/svg" version="1.1">\n'+'<title>CDS organisation-'+organism+'('+start+'..'+stop+')</title>\n'+'\n<text x="10" y="910" font-size="40" font-style="italic">'+organism+'</text>\n'+svg_arrow+'</svg>'
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n"""+'<svg width="'+str(svg_width)+'" height="200"\n'+'    xmlns="http://www.w3.org/2000/svg" version="1.1">\n'+'<title>CDS organisation-'+organism+'('+start+'..'+stop+')</title>\n'+'\n<text x="10" y="110" font-size="40" font-style="italic">'+organism+'</text>\n'+svg_arrow+'</svg>'
     return(svg_code)
 
-inputfile=sys.argv[2]
+inputfile=sys.argv[1]
 ifile=open(inputfile,'r')
 cds_table=ifile.readlines()
 ifile.close()
