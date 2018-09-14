@@ -77,7 +77,7 @@ def code_svg (svg_width,organism,svg_arrow):
     "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n"""+'<svg width="'+str(svg_width)+'" height="1000"\n'+'    xmlns="http://www.w3.org/2000/svg" version="1.1">\n'+'<title>CDS organisation-'+organism+'('+start+'..'+stop+')</title>\n'+'\n<text x="10" y="910" font-size="40" font-style="italic">'+organism+'</text>\n'+svg_arrow+'</svg>'
     return(svg_code)
 
-inputfile=sys.argv[1]
+inputfile=sys.argv[2]
 ifile=open(inputfile,'r')
 cds_table=ifile.readlines()
 ifile.close()
