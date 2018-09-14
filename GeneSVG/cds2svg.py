@@ -2,12 +2,9 @@
 """Script for converting the cds in base range
 to a picture in vector graphics.
 
-#Usage: python cds2svg.py
-Output:embl2cds.svg
+#Usage: python cds2svg.py filename
+Output:filename.svg
 """
-
-"""input file MUST be called embl2cds.txt.
-output file will be called embl2cds.svg"""
 
 """Example of input file:
 Aliivibrio_R8-70_concat
@@ -80,8 +77,8 @@ def code_svg (svg_width,organism,svg_arrow):
     "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n"""+'<svg width="'+str(svg_width)+'" height="1000"\n'+'    xmlns="http://www.w3.org/2000/svg" version="1.1">\n'+'<title>CDS organisation-'+organism+'('+start+'..'+stop+')</title>\n'+'\n<text x="10" y="910" font-size="40" font-style="italic">'+organism+'</text>\n'+svg_arrow+'</svg>'
     return(svg_code)
 
-
-ifile=open('embl2cds.txt','r')
+inputfile=sys.argv[1]
+ifile=open(inputfile,'r')
 cds_table=ifile.readlines()
 ifile.close()
 
@@ -93,6 +90,7 @@ arrow_data=set_coordinates(cds_table,organism,start)
 svg_arrow=draw_arrow(arrow_data)
 svg_code=code_svg(svg_width,organism,svg_arrow)
 
-ofile=open('embl2cds.svg','w')
+outputfile=inputfile.split('.')[0]+'.svg'
+ofile=open(outputfile,'w')
 ofile.write(svg_code)
 ofile.close()
